@@ -1,0 +1,16 @@
+:root {
+/*
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  */
+  /* color: lime; */
+  min-height: 100%;
+  transition: background-color .5s ease;
+  background-color:  #0813fa /* darkkhaki; */
+}
+
+/* :root, html, body {
+  background-color: black;
+  color: lime;
+  min-height: 100vh;
+} */
