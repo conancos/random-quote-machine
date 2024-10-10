@@ -11,9 +11,7 @@
   --primary-color-light: #d3d3d3;
   --primary-color-shadow: #050566ee;
   --secondary-color-shadow: #09f009;
-  --terciary-color-shadow: #d3d;
-  --terciary-color-shadow: crimson;
-  --random-color: blue;
+  --first-color: crimson;
   /*font-weight*/
   --thin: 100;
   --extra-light: 200;
@@ -31,13 +29,10 @@ body {
   font-family: 'Foldit ttf', sans-serif;
   text-align: center;
   color: var(--primary-color-light);
-  
-
 /*screen*/
   min-height: 100svh;
-  background: black;
-  transition: background .3s ease;
- 
+  background-color: #070714;
+  transition: background-color .4s ease;
 }
 
 

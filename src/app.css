@@ -3,27 +3,32 @@
 main {
   display: grid;
   place-content: center;
-  min-height: 100vh;  
-  background: linear-gradient(var(--primary-color-dark), 33%, var(--terciary-color-shadow), 66.75%, var(--primary-color-dark));
+  min-height: 100vh;
+  /* background: linear-gradient(black, var(--primary-color-dark), transparent, var(--primary-color-dark), #000); */
+  /* background: linear-gradient(var(--primary-color-dark), var(--first-color) 100%, var(--primary-color-dark)); */
+  transition: background-color .4s ease;
+  z-index: 0;
   
   & #quote-box {
     max-width: 650px;
     padding: 1rem 1rem;
     margin-inline: 1rem;
+    border-radius: 5px;
     background: var(--secondary-color-dark);
     opacity: 0;
     opacity: 1;
-
+    z-index: 2;
+    
     & section#quote-and-author {
       margin-block: .5rem 2rem;
-
+      
       p#text {
         font-family: 'Foldit', sans-serif;
-        color: var(--terciary-color-shadow);
+        color: var(--first-color);
         font-size: 2.5rem;
         letter-spacing: 1px;
         font-weight: var(--light);
-        text-shadow: 0px 0px 8px var(--terciary-color-shadow);
+        text-shadow: 0px 0px 8px var(--first-color);
         transition: .3s ease;
       }
       p#author {
@@ -35,8 +40,8 @@ main {
         font-style: italic;
         letter-spacing: 2px;
         font-weight: var(--light);
-        color: var(--terciary-color-shadow);
-        text-shadow: 0px 0px 2px var(--terciary-color-shadow);
+        color: var(--first-color);
+        text-shadow: 0px 0px 2px var(--first-color);
         transition: .3s ease;
       }
     }
@@ -49,40 +54,58 @@ main {
       
       & a#tweet-quote, a#go-to-twitter {
         font-family: 'Foldit', sans-serif;
-        color: var(--terciary-color-shadow);
+        color: var(--first-color);
         font-size: 2rem;
         font-weight: 600;
         text-decoration: none;
         margin-block: 4px;
         
       }
-
+      
       & button#new-quote {
         font-family: 'Foldit', sans-serif;
         color: var(--secondary-color-dark);
-        background: var(--terciary-color-shadow);
+        background: var(--first-color);
         font-size: 1.5rem;
         font-weight: var(--semi-bold);
+        border-radius: 4px;
         border: none;
         /* box-shadow: inset 0px 0px 4px 4px var(--primary-color-dark) *//* , 0 0 6px 2px red */;
         width: 100px;
         height: 40px;
         cursor: pointer;
-        transition: background .3s ease;
-
+        transition: background .4s ease;
+        
         &:active {
-          box-shadow: inset 0px 0px 5px 5px var(--primary-color-dark);
-          text-shadow: 0 0 2px darkred;
-          font-size: .75rem;
+          box-shadow: inset 0px 0px 2px 1px #000;
+          text-shadow: 0 0 1px darkred;
+          font-size: 1.45rem;
           transition: all .1s ease;
+          filter: blur(0)
         }
       }
     }
   }
 }
 
-
-.colors {
-  color: #f3a353, #f9c74f, #09c46a, #2a9d8f, #264653,
-         #e76f51, #f4a261, #e9c46a, #2a5d8f, #5646f3,
+main::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  max-width: 900px;
+  height: 25vh;
+  
+  z-index: -2;
+  filter: blur(100px);
+  border-radius: 0%;
+  z-index: 1;
+  
+  box-shadow: 0px 0px 10px 40px crimson;
+  /* background: linear-gradient(var(--primary-color-dark), 33%, var(--first-color), 66.75%, var(--primary-color-dark)); */
+  background-color: var(--first-color);
+  transition: background-color .4s ease, box-shadow .5s ease;
+  
 }

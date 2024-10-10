@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import './app.css'
 
 /* document.querySelector('html').removeAttribute('style'); */
@@ -13,9 +12,9 @@ export default function App() {
           <p id="author" className="author-res">-Joaquín Martínez</p>
         </section>
         <section id="buttons">
-          { 
-            (navigator.userAgent.browser !== 'Brave') ?
-            <a id="tweet-quote" className="tweet-quote-res" aria-label="Tweet this quote" target="_blank" rel="noreferrer noopener" href="https://twitter.com/intent/tweet">Tweet</a>/* ?hashtags=quotes&related=freecodecamp&text=prueba-de-tweet */
+          {
+            navigator.userAgent.browser !== 'Brave' ?
+            <a id="tweet-quote" className="tweet-quote-res" aria-label="Tweet this quote" target="_blank" rel="noreferrer noopener" href="https://twitter.com/intent/tweet">Tweet</a>
             :
             <a id="go-to-twitter" className="go-to-twitter-res" aria-label="Go to Twitter" target="_blank" rel="noreferrer noopener" href="https://twitter.com">tweet on Twitter</a>
           }
@@ -25,3 +24,7 @@ export default function App() {
     </main>
   )
 }
+/* 
+href="https://twitter.com/intent/tweet ??
+?hashtags=quotes&related=freecodecamp&text=prueba-de-tweet
+*/
