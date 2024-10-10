@@ -1,12 +1,27 @@
 import React from 'react'
-/* import './app.css' */
+import ReactDOM from 'react-dom/client'
+import './app.css'
 
+/* document.querySelector('html').removeAttribute('style'); */
 export default function App() {
-  /* document.querySelector('html').removeAttribute('style'); */
+    
   return (
-  <div>
-    <h1 className="title">hola mundo</h1>
-    <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, corporis.</p>
-  </div>
+    <main>
+      <article id="quote-box">
+        <section id="quote-and-author" aria-live="polite">
+          <p id="text" className="text-res">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, corporis.</p>
+          <p id="author" className="author-res">-Joaquín Martínez</p>
+        </section>
+        <section id="buttons">
+          { 
+            (navigator.userAgent.browser !== 'Brave') ?
+            <a id="tweet-quote" className="tweet-quote-res" aria-label="Tweet this quote" target="_blank" rel="noreferrer noopener" href="https://twitter.com/intent/tweet">Tweet</a>/* ?hashtags=quotes&related=freecodecamp&text=prueba-de-tweet */
+            :
+            <a id="go-to-twitter" className="go-to-twitter-res" aria-label="Go to Twitter" target="_blank" rel="noreferrer noopener" href="https://twitter.com">tweet on Twitter</a>
+          }
+          <button id="new-quote">New quote</button>  
+        </section>
+      </article>
+    </main>
   )
 }

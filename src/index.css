@@ -1,16 +1,57 @@
-:root {
-/*
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
-  */
-  /* color: lime; */
-  min-height: 100%;
-  transition: background-color .5s ease;
-  background-color:  #0813fa /* darkkhaki; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* :root, html, body {
-  background-color: black;
-  color: lime;
-  min-height: 100vh;
-} */
+:root {
+  --primary-color-dark: #040714;
+  --secondary-color-dark: #041c25;
+  --primary-color-light: #d3d3d3;
+  --primary-color-shadow: #050566ee;
+  --secondary-color-shadow: #09f009;
+  --terciary-color-shadow: #d3d;
+  --terciary-color-shadow: crimson;
+  --random-color: blue;
+  /*font-weight*/
+  --thin: 100;
+  --extra-light: 200;
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --black: 900;
+}
+
+body {
+/*text*/
+  font-family: 'Foldit ttf', sans-serif;
+  text-align: center;
+  color: var(--primary-color-light);
+  
+
+/*screen*/
+  min-height: 100svh;
+  background: black;
+  transition: background .3s ease;
+ 
+}
+
+
+@media (width <= 500px) {
+  .text-res {
+    font-size: 2.2rem !important;
+  }
+  .author-res {
+    font-size: 1.7rem !important;
+  }
+  /* .tweet-quote-res {
+    font-size: 1.4rem !important;  reglas para: tweet y button
+  }
+  .go-to-twitter-res {
+    
+  } */
+}
