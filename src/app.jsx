@@ -1,29 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { RandomColor } from './components/RandomColor'
 import './app.css'
 
 /* document.querySelector('html').removeAttribute('style'); */
 export default function App() {
-
   const [color, setColor] = useState('crimson');
+
   const changeColors = () => {
-    setColor(RandomColor);
+    setColor(RandomColor());
   }
-  document.documentElement.style.setProperty('--current-color', color)
-  document.documentElement.style.setProperty('--current-color-shadow', color)
   
-  switch(color) {
-    case 'navy':
-      document.documentElement.style.setProperty('--current-color-shadow', "cyan");      
-      break;    
-  }  
+  useEffect(() => {
+    document.documentElement.style.setProperty('--current-color', color);
+    document.documentElement.style.setProperty('--current-color-shadow', color);
+   
+     color === "blue" || color === "mediumblue" || color === "darkblue" || color === "black" || color === "navy" || color === "indigo" || color === "maroon" ?
+      document.documentElement.style.setProperty('--current-bgcolor-dark', 'ivory') :
+      document.documentElement.style.setProperty('--current-bgcolor-dark', '#041c25')
+  }, [color]);
+  
 
   return (
     <main>
       <article id="quote-box">
         <section id="quote-and-author" aria-live="polite">
           <p id="text" className="text-res">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, corporis.</p>
-          <p id="author" className="author-res">-Joaquín Martínez</p>
+          <p id="author" className="author-res">- Joaquín Martínez</p>
         </section>
         <section id="buttons">
           {

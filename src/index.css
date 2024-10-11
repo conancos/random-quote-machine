@@ -8,7 +8,8 @@
 
 :root {
   --primary-color-dark: #040714;
-  --secondary-color-dark: #041c25;
+  --current-bgcolor-dark: #041c25;
+  --current-bgcolor-light: ivory;
   --primary-color-light: #d3d3d3;
   --primary-color-shadow: #050566ee;
   --secondary-color-shadow: #09f009;
