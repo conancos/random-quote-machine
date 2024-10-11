@@ -11,7 +11,8 @@
   --primary-color-light: #d3d3d3;
   --primary-color-shadow: #050566ee;
   --secondary-color-shadow: #09f009;
-  --first-color: crimson;
+  --current-color: crimson;
+  --current-color-shadow: crimson;
   /*font-weight*/
   --thin: 100;
   --extra-light: 200;
@@ -32,7 +33,7 @@ body {
 /*screen*/
   min-height: 100svh;
   background-color: #070714;
-  transition: background-color .4s ease;
+  transition: background-color .3s ease;
 }
 
 

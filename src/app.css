@@ -5,8 +5,8 @@ main {
   place-content: center;
   min-height: 100vh;
   /* background: linear-gradient(black, var(--primary-color-dark), transparent, var(--primary-color-dark), #000); */
-  /* background: linear-gradient(var(--primary-color-dark), var(--first-color) 100%, var(--primary-color-dark)); */
-  transition: background-color .4s ease;
+  /* background: linear-gradient(var(--primary-color-dark), var(--current-color) 100%, var(--primary-color-dark)); */
+  transition: background-color .3s ease;
   z-index: 0;
   
   & #quote-box {
@@ -24,12 +24,12 @@ main {
       
       p#text {
         font-family: 'Foldit', sans-serif;
-        color: var(--first-color);
+        color: var(--current-color);
         font-size: 2.5rem;
         letter-spacing: 1px;
         font-weight: var(--light);
-        text-shadow: 0px 0px 8px var(--first-color);
-        transition: .3s ease;
+        text-shadow: 0px 0px 8px var(--current-color-shadow);
+        transition: color .6s ease;
       }
       p#author {
         font-family: 'Foldit ttf', sans-serif;
@@ -40,9 +40,9 @@ main {
         font-style: italic;
         letter-spacing: 2px;
         font-weight: var(--light);
-        color: var(--first-color);
-        text-shadow: 0px 0px 2px var(--first-color);
-        transition: .3s ease;
+        color: var(--current-color);
+        text-shadow: 0px 0px 2px var(--current-color-shadow);
+        transition: color .5s ease, text-shadow .5s ease;
       }
     }
     
@@ -54,18 +54,18 @@ main {
       
       & a#tweet-quote, a#go-to-twitter {
         font-family: 'Foldit', sans-serif;
-        color: var(--first-color);
+        color: var(--current-color);
         font-size: 2rem;
         font-weight: 600;
         text-decoration: none;
         margin-block: 4px;
-        
+        transition: color .5s ease, background-color .5s ease;
       }
       
       & button#new-quote {
         font-family: 'Foldit', sans-serif;
         color: var(--secondary-color-dark);
-        background: var(--first-color);
+        background: var(--current-color);
         font-size: 1.5rem;
         font-weight: var(--semi-bold);
         border-radius: 4px;
@@ -74,11 +74,11 @@ main {
         width: 100px;
         height: 40px;
         cursor: pointer;
-        transition: background .4s ease;
+        transition: background .5s ease;
         
         &:active {
           box-shadow: inset 0px 0px 2px 1px #000;
-          text-shadow: 0 0 1px darkred;
+          text-shadow: 0 0 1px var(--current-color-shadow);
           font-size: 1.45rem;
           transition: all .1s ease;
           filter: blur(0)
@@ -103,9 +103,9 @@ main::before {
   border-radius: 0%;
   z-index: 1;
   
-  box-shadow: 0px 0px 10px 40px crimson;
-  /* background: linear-gradient(var(--primary-color-dark), 33%, var(--first-color), 66.75%, var(--primary-color-dark)); */
-  background-color: var(--first-color);
-  transition: background-color .4s ease, box-shadow .5s ease;
+  box-shadow: 0px 0px 10px 40px var(--current-color);
+  /* background: linear-gradient(var(--primary-color-dark), 33%, var(--current-color), 66.75%, var(--primary-color-dark)); */
+  background-color: var(--current-color);
+  transition: background-color .2s ease, box-shadow .3s ease;
   
 }

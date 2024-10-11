@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { RandomColor } from './components/RandomColor'
 import './app.css'
 
 /* document.querySelector('html').removeAttribute('style'); */
 export default function App() {
-    
+
+  const [color, setColor] = useState('crimson');
+  const changeColors = () => {
+    setColor(RandomColor);
+  }
+  document.documentElement.style.setProperty('--current-color', color)
+  document.documentElement.style.setProperty('--current-color-shadow', color)
+  
+  switch(color) {
+    case 'navy':
+      document.documentElement.style.setProperty('--current-color-shadow', "cyan");      
+      break;    
+  }  
+
   return (
     <main>
       <article id="quote-box">
@@ -18,7 +32,7 @@ export default function App() {
             :
             <a id="go-to-twitter" className="go-to-twitter-res" aria-label="Go to Twitter" target="_blank" rel="noreferrer noopener" href="https://twitter.com">tweet on Twitter</a>
           }
-          <button id="new-quote">New quote</button>  
+          <button id="new-quote" onClick={changeColors}>New quote</button>  
         </section>
       </article>
     </main>
