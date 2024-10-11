@@ -81,7 +81,8 @@ main {
           text-shadow: 0 0 1px var(--current-color-shadow);
           font-size: 1.45rem;
           transition: all .1s ease;
-          filter: blur(0)
+          filter: blur(0);
+          
         }
       }
     }
@@ -108,4 +109,19 @@ main::before {
   background-color: var(--current-color);
   transition: background-color .2s ease, box-shadow .3s ease;
   
+}
+
+@media (width <= 500px) {
+  .text-res {
+    font-size: 2.2rem !important;
+  }
+  .author-res {
+    font-size: 1.7rem !important;
+  }
+  /* .tweet-quote-res {
+    font-size: 1.4rem !important;  reglas para: tweet y button
+  }
+  .go-to-twitter-res {
+    
+  } */
 }
