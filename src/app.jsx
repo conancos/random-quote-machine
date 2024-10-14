@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { RandomColor } from './components/RandomColor'
+import RandomQuote from './components/RandomQuote'
 import './app.css'
 
-/* document.querySelector('html').removeAttribute('style'); */
 export default function App() {
   const [color, setColor] = useState('crimson');
 
-  const changeColors = () => {
+  const handleclick = () => {
     setColor(RandomColor());
   }
   
@@ -14,7 +14,7 @@ export default function App() {
     document.documentElement.style.setProperty('--current-color', color);
     document.documentElement.style.setProperty('--current-color-shadow', color);
    
-     color === "blue" || color === "mediumblue" || color === "darkblue" || color === "black" || color === "navy" || color === "indigo" || color === "maroon" ?
+     (color === "blue" || color === "mediumblue" || color === "darkblue" || color === "midnightblue" || color === "black" || color === "navy" || color === "indigo" || color === "maroon") ?
       document.documentElement.style.setProperty('--current-bgcolor-dark', 'ivory') :
       document.documentElement.style.setProperty('--current-bgcolor-dark', '#041c25')
   }, [color]);
@@ -23,10 +23,11 @@ export default function App() {
   return (
     <main>
       <article id="quote-box">
-        <section id="quote-and-author" aria-live="polite">
-          <p id="text" className="text-res">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, corporis.</p>
-          <p id="author" className="author-res">- Joaquín Martínez</p>
-        </section>
+        <RandomQuote  isNewColor={color} />
+        {/* <section id="quote-and-author" aria-live="polite">
+          <p id="text" className="text-res">{quote}</p>
+          <p id="author" className="author-res">- {author}</p>
+        </section> */}
         <section id="buttons">
           {
             navigator.userAgent.browser !== 'Brave' ?
@@ -34,7 +35,7 @@ export default function App() {
             :
             <a id="go-to-twitter" className="go-to-twitter-res" aria-label="Go to Twitter" target="_blank" rel="noreferrer noopener" href="https://twitter.com">tweet on Twitter</a>
           }
-          <button id="new-quote" onClick={changeColors}>New quote</button>  
+          <button id="new-quote" onClick={handleclick}>New quote</button>  
         </section>
       </article>
     </main>

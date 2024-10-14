@@ -4,25 +4,30 @@ main {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  /* background: linear-gradient(black, var(--primary-color-dark), transparent, var(--primary-color-dark), #000); */
-  /* background: linear-gradient(var(--primary-color-dark), var(--current-color) 100%, var(--primary-color-dark)); */
+  /* background: linear-gradient(var(--primary-color-dark), var(--current-color) 50%, var(--primary-color-dark)); */
   transition: background-color .3s ease;
+  transition: width 1s ease, height 1s ease;
   z-index: 0;
-  
   & #quote-box {
-    max-width: 650px;
+    /* width: 500px; */
+    /* max-width: 650px; */
+    width: min(600px, 90vw);
+    margin: auto;
+    min-height: 250px;
     padding: 1rem 1rem;
-    margin-inline: 1rem;
     border-radius: 5px;
     background-color: var(--current-bgcolor-dark);
-    transition: background-color .3s ease;
-    opacity: 0;
-    opacity: 1;
-    z-index: 2;
+    transition: background-color .4s ease;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 1s ease, height 1s ease;  
     
     & section#quote-and-author {
-      margin-block: .5rem 2rem;
-      
+      margin-block: 1.5rem;
+      animation: fadeIn 1s ease forwards;
+
       p#text {
         font-family: 'Foldit', sans-serif;
         color: var(--current-color);
@@ -35,9 +40,10 @@ main {
       p#author {
         font-family: 'Foldit ttf', sans-serif;
         font-size: 2rem;
+        /* max-height: 50px; */
         text-align: right;
-        /* padding: .75rem; */
-        margin: 1rem 1.3rem;
+        padding-top: .75rem;
+        margin: .5rem 1.3rem;
         font-style: italic;
         letter-spacing: 2px;
         font-weight: var(--light);
@@ -52,6 +58,9 @@ main {
       justify-content: space-between;
       margin-inline: 1rem;
       gap: 1rem;
+      height: 100%;
+      flex-wrap: wrap;
+      align-content: end;
       
       & a#tweet-quote, a#go-to-twitter {
         font-family: 'Foldit', sans-serif;
@@ -60,9 +69,8 @@ main {
         font-weight: 600;
         text-decoration: none;
         margin-block: 4px;
-        transition: color .4s ease, background-color .5s ease;
+        transition: color .5s ease;
       }
-      
       & button#new-quote {
         font-family: 'Foldit', sans-serif;
         color: var(--current-bgcolor-dark);
@@ -74,9 +82,9 @@ main {
         /* box-shadow: inset 0px 0px 4px 4px var(--primary-color-dark) *//* , 0 0 6px 2px red */;
         width: 100px;
         height: 40px;
+        margin-block: auto;
         cursor: pointer;
         transition: background .5s ease;
-
         &:active {
           box-shadow: inset 0px 0px 2px 1px #000;
           text-shadow: 0 0 1px var(--current-color-shadow);
@@ -98,17 +106,16 @@ main::before {
   width: 100vw;
   max-width: 900px;
   height: 25vh;
-  
-  z-index: -2;
+
   filter: blur(100px);
   border-radius: 0%;
-  z-index: 1;
+  z-index: 0;
   
   box-shadow: 0px 0px 10px 40px var(--current-color);
-  /* background: linear-gradient(var(--primary-color-dark), 33%, var(--current-color), 66.75%, var(--primary-color-dark)); */
   background-color: var(--current-color);
-  transition: background-color .2s ease, box-shadow .3s ease;
-  
+  background: linear-gradient(var(--primary-color-dark), 33%, var(--current-color), 66.75%, var(--primary-color-dark));
+  transition: background-color .5s ease, box-shadow .5s ease;
+  animation: fadeIn 1s ease forwards;
 }
 
 @media (width <= 500px) {
@@ -118,10 +125,16 @@ main::before {
   .author-res {
     font-size: 1.7rem !important;
   }
-  /* .tweet-quote-res {
-    font-size: 1.4rem !important;  reglas para: tweet y button
+}
+
+.fadeIn { 
+  animation: fadeIn .5s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .go-to-twitter-res {
-    
-  } */
+  to {
+    opacity: 1;
+  }
 }
