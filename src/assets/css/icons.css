@@ -1,0 +1,18 @@
+.icons {
+    /* margin: auto;
+    vertical-align: middle;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end; */
+    
+    
+    /* color: var(--current-color) !important; */
+    --current-color: inherit;
+    color: #041c25;
+    background-color: var(--current-color-icons);
+    transition: background .5s ease;
+    border-radius: 4px;
+
+    
+}
