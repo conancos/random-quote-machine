@@ -5,10 +5,11 @@
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-end; */
-    
+    width: 30px;
+    height: 30px;
     
     /* color: var(--current-color) !important; */
-    --current-color: inherit;
+    /* --current-color: inherit; */
     color: #041c25;
     background-color: var(--current-color-icons);
     transition: background .5s ease;

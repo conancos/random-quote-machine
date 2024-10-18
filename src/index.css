@@ -27,11 +27,11 @@
   --current-bgcolor-dark: #041c25;
   --current-bgcolor-light: ivory;
   --primary-color-light: #d3d3d3;
-  --primary-color-shadow: #050566ee;
-  --secondary-color-shadow: #09f009;
+  /* --primary-color-shadow: #050566ee; */
+  /* --secondary-color-shadow: #09f009; */
   --current-color: crimson;
   --current-color-shadow: crimson;
-  --current-color-icons: var(--current-color)
+  --current-color-icons: var(--current-color);
   /*font-weight*/
   --thin: 100;
   --extra-light: 200;

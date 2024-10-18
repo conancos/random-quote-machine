@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { RandomColor } from './components/RandomColor';
 import RandomQuote from './components/RandomQuote';
+import SocialButtons from './components/SocialButtons';
+import QuoteButton from './components/QuoteButton';
+import FooterLink from './components/FooterLink';
 import './app.css';
-import X from "./assets/icons/x.svg";
-import In from "./assets/icons/in.svg";
 
 export default function App() {
   const [color, setColor] = useState('crimson');
@@ -27,13 +28,11 @@ export default function App() {
     };
     changeValue('--current-color', color);
     changeValue('--current-color-shadow', color);
-    if (["blue", "mediumblue", "darkblue", "midnightblue", "black", "navy", "indigo", "maroon"].includes(color)) {
-      changeValue('--current-bgcolor-dark', 'ivory');
-      changeValue('--current-color-icons', "transparent");
-    } else {
-      changeValue('--current-bgcolor-dark', '#041c25');
-      changeValue('--current-color-icons', "var(--current-color)");
-    }
+
+    const isDarkColor = ["blue", "mediumblue", "darkblue", "midnightblue", "black", "navy", "indigo", "maroon", "darkred", "darkslategray"].includes(color);
+    changeValue('--current-bgcolor-dark', isDarkColor ? "var(--current-bgcolor-light)" : "#041c25");
+    changeValue('--current-color-icons', isDarkColor ? "transparent" : "var(--current-color)");
+      
   }, [color]);
   
 
@@ -55,27 +54,11 @@ export default function App() {
       <article id="quote-box">
         <RandomQuote isNewColor={color} onNewQuote={handleNewQuote} />
         <section id="buttons">
-          <aside id="container-rrss">
-            <a id="tweet-quote" className="tweet-quote tweet-quote-res" 
-              aria-label="Tweet this quote" target="_blank" rel="noreferrer noopener" 
-              href={tweetUrl} title="Tweet on X">
-                <img src={X} alt="X" className="icons" />
-            </a>
-            <a id="linkedIn-quote" className="tweet-quote tweet-quote-res" rel="noreferrer noopener"
-              aria-label="Share on LinkedIn" target="_blank" 
-              href={linkedInUrl} title="Share on LinkedIn">
-                <img src={In} alt="In" className="icons" />
-            </a>
-          </aside>
-          <button id="new-quote" onClick={handleClickAction}>New quote</button>  
+          <SocialButtons tweetUrl={tweetUrl} linkedInUrl={linkedInUrl} />
+          <QuoteButton handleClickAction={handleClickAction} /> 
         </section>
       </article>
-      <footer className="footer">
-        <a href="https://conancos.dev/portfolio" 
-          target="_blank" aria-label="make by..."
-        >by conancos.dev
-        </a>
-      </footer>
+      <FooterLink />
     </main>
   );
 
