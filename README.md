@@ -1,8 +1,70 @@
-# React + Vite
+## **RANDOM-QUOTE-MACHINE**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+>[!NOTE]
+>- Esta aplicación web genera citas aleatorias y permite a los usuarios interactuar con ellas de manera dinámica.
+>
 
-Currently, two official plugins are available:
+### Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+_RANDOM-QUOTE-MACHINE_ es una aplicación web construida con _React y CSS avanzado,>_ para completar uno de los proyectos finales requeridos por [**_freeCodeCamp.org_**](https://freecodecamp.org/espanol).
+
+Su finalidad es proporcionar una forma divertida y motivadora de descubrir nuevas citas de personajes famosos y poder compartirlas a través de varias redes sociales.
+
+### Estructura
+La estructura del proyecto es la siguiente:
+
+- **/src/:** Carpeta principal que contiene el código fuente de la aplicación.
+    - **main.jsx:** Es el punto de entrada de la aplicación React, donde se importa el componente principal App.jsx y se renderiza en el DOM con el ID "root".
+    - **index.css:** Archivo de estilos que define algunos aspectos generales de la aplicación, la declaración de las variables css de todo el proyecto y las fuentes.
+    - **App.jsx:** Componente principal de la aplicación donde se constituye el esquema general y renderiza los demás componentes.
+    - **app.css:** Archivo que estiliza la estructura principal, donde se importan otros archivos de estilos secundarios, se conforman las transiciones, animaciones y las media queries para el texto de la aplicación, independiente del propio patrón de diseño responsivo general.
+- **/components/:** El propio nombre describe el contenido de la carpeta.
+   - **RandomQuote.jsx:** Componente que utiliza la API fetch para realizar una solicitud asíncrona a un endpoint que devuelve un objeto JSON del que se extrae aleatoriamente una cita y su correspondiente autor, manejando la respuesta mediante promesas y actualizando el estado del componente para renderizar dinámicamente la propia cita aleatoria en la interfaz de usuario (U/I).
+   - **RandomColor.jsx:** Componente que genera un color aleatorio de entre una basta gama, coloreando las fuentes, botones y fondo de la App.
+   - **QuoteButton.jsx:** Componente que renderiza el botón que recibe el manejador de click por props, seteando el estado de la variable _color_, e iniciando el resto de procesos de estados en la aplicación.
+   - **SocialButtons.jsx:** Componente que renderiza los botones para compartir dinámicamente las citas a través de las RRSS X(Twitter) o LinkedIn.
+- **vite.config.js:** Archivo de configuración de _**Vite**_ que define la configuración del entorno de desarrollo para la aplicación _**React**_, utilizando el plugin @vitejs/plugin-react-swc para soporte de JSX y optimización del código.
+
+### Funcionalidad
+La aplicación tiene las siguientes características:
+
+Genera citas aleatorias y las renderiza en la pantalla.
+Permite a los usuarios interactuar con la cita mediante botones de acción:
+Tweetear la cita en Twitter.
+Postear la cita en LinkedIn.
+Generar una nueva cita.
+Utiliza CSS avanzado para crear un diseño atractivo y responsivo.
+Es compatible con navegadores modernos, incluyendo Google Chrome, Mozilla Firefox y Safari.
+
+
+Compatibilidad entre navegadores
+La aplicación es compatible con navegadores modernos que soportan HTML5, CSS3 y JavaScript. Se ha probado en los siguientes navegadores:
+
+Google Chrome (versión 100+)
+Mozilla Firefox (versión 90+)
+Safari (versión 14+)
+[!NOTE] Si encuentras algún problema de compatibilidad, por favor informa en la sección de issues.
+
+Características avanzadas CSS utilizadas
+La aplicación utiliza las siguientes características avanzadas de CSS:
+
+Flexbox para crear layouts flexibles y responsivos.
+Grid para crear diseños de cuadrícula.
+CSS Variables para definir colores y estilos de manera centralizada.
+Animaciones y transiciones para crear efectos visuales atractivos.
+Traducción de citas
+La aplicación no incluye una función de traducción de citas integrada. Sin embargo, se puede utilizar un servicio de traducción externo para traducir las citas. Se recomienda utilizar un servicio como Google Translate o Microsoft Translator para traducir las citas.
+
+[!IMPORTANT] Si deseas agregar una función de traducción de citas integrada, por favor informa en la sección de issues.
+
+Contribuciones
+Si deseas contribuir a la aplicación, por favor sigue los siguientes pasos:
+
+Fork el repositorio.
+Crea una rama para tu contribución.
+Realiza tus cambios y pruebas.
+Envía un pull request.
+[!TIP] Asegúrate de seguir las convenciones de codificación y estilo de la aplicación.
+
+Licencia
+La aplicación está licenciada bajo la licencia MIT.

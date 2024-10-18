@@ -1,4 +1,3 @@
-/* @import url('./assets/css/fonts.css'); */
 @import url('./assets/css/icons.css');
 
 main {
@@ -10,8 +9,6 @@ main {
   transition: width 1s ease, height 1s ease;
   z-index: 0;
   & #quote-box {
-    /* width: 500px; */
-    /* max-width: 650px; */
     width: min(600px, 90vw);
     margin: auto;
     min-height: 250px;
@@ -41,7 +38,6 @@ main {
       p#author {
         font-family: 'Foldit ttf', sans-serif;
         font-size: 2rem;
-        /* max-height: 50px; */
         text-align: right;
         padding-top: .75rem;
         margin: .5rem 1.3rem;
