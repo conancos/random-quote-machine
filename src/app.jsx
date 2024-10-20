@@ -43,7 +43,7 @@ export default function App() {
   : `https://twitter.com/intent/tweet?text=${encodeURIComponent(`#Quotes "${quote}" - ${author}`)}`;
   /* const url = window.location.href; */
   
-  const referenceURL = "window.location.href"; // "https://conancos.dev/portfolio";
+  const referenceURL = "https://conancos.dev/portfolio"; // "window.location.href";
 
   // URLs para compartir RandomQuote ("quote and author") en LinkedIn.
   const linkedInUrl= `https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl=${encodeURIComponent(`${referenceURL}`)}&text=${encodeURIComponent(`"${quote}" - ${author}`)}`;
