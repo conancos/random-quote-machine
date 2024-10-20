@@ -1,18 +1,13 @@
-<center>
+<div align="center">
 
-# **RANDOM-QUOTE-MACHINE** 
+## **RANDOM-QUOTE-MACHINE** 
+###### Esta aplicación web genera citas aleatorias de personalidades relevantes y permitiendo al usuario interactuar con ellas de manera dinámica en sus RRSS.
+</div>
 <br>
-</center>
-
-```markdown
-#ff0 Esta aplicación web genera citas aleatorias de personalidades relevantes y permitiendo al usuario interactuar con ellas de manera dinámica en sus RRSS.
-```
 
 ### Descripción
 
-- _RANDOM-QUOTE-MACHINE_ es una aplicación web construida con _**REACT**_ para completar uno de los proyectos finales requeridos para obtener la certificación _**Front End Development Libraries Projects**_ por: &nbsp;[**_freeCodeCamp.org_**](https://freecodecamp.org/espanol).
-
----
+- _RANDOM-QUOTE-MACHINE_ es una aplicación web construida con _**REACT**_ para completar uno de los proyectos finales requeridos para obtener la certificación _**Front End Development Libraries Projects**_ por [**_freeCodeCamp.org_**](https://freecodecamp.org/espanol).
 
 ### Estructura
 >La estructura del proyecto es la siguiente:
@@ -30,8 +25,6 @@
 - **/assets/:** Carpeta que contiene activos variados (estilos específicos, iconos, etc).
 - **vite.config.js:** Archivo de configuración de _**Vite**_ que define la configuración del entorno de desarrollo para la aplicación _**React**_, utilizando el plugin @vitejs/plugin-react-swc para soporte de JSX y optimización del código.
 
----
-
 ### Funcionalidad y Compatibilidad
 >La aplicación tiene las siguientes características:
 
@@ -47,8 +40,6 @@
 >[!NOTE]
 >Si encuentras algún problema de compatibilidad en tu navegador, por favor informa en la sección de issues.
 
----
-
 ### Características avanzadas CSS utilizadas
 >La aplicación utiliza las siguientes características avanzadas de CSS:
 
@@ -60,20 +51,18 @@
 - [x] Media Queries para mejorar el responsive design.
 - [ ] Scroll-driven-animations.
 
----
-
 ### Licencia
 
 Este proyecto está licenciado bajo la **GNU General Public License v3.0**.  
-<center>
+<div align="center">
 
 ![GPLv3 Logo](https://www.gnu.org/graphics/gplv3-127x51.png)
 
-</center>
+</div>
 
->[!TIP]
->Pese a ser un pequeño proyecto; La implementación de una licencia tiene como objetivo el practicar, aprender y familiarizarse con sus características, estableciendo una estructura adecuada que informe correctamente al usuario.
->Esta licencia copyleft exige que cualquier software derivado sea también distribuido bajo la GPL, promueve el software libre de código abierto, protege contra reclamos de patentes y requiere atribución.
+>[!IMPORTANT]
+>Pese a ser un pequeño proyecto, la implementación de una licencia tiene como objetivo el practicar, aprender y familiarizarse con sus características, estableciendo una estructura adecuada que informe correctamente al usuario.
+>Esta licencia copyleft exige que cualquier software derivado sea también distribuido bajo la GPL. Promueve el software libre de código abierto, protege contra reclamos de patentes y requiere atribución.
 
 ### Información sobre la Licencia
 
@@ -99,8 +88,6 @@ Si contribuyes al proyecto, renuncias a cualquier reclamo de patente relacionado
 
 Para obtener más detalles, consulta el texto completo de la [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
 
----
-
 ### Fuentes de Datos, Funcionalidad y Diseño
 
 Las citas inspiradoras utilizadas en esta aplicación se obtienen de [**quotes.json**](https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json), proporcionado por camperbot.
@@ -109,8 +96,7 @@ Así mismo la funcionalidad y diseño están basados inicialmente sobre esta [**
 
 ---
 
-<center>
-<br>
+<div align="center">
 
 ### Link del sitio web: &nbsp; [**random-quote-machine ↗**](https://conancos.dev/random-quote-machine/)
 
@@ -120,6 +106,7 @@ Así mismo la funcionalidad y diseño están basados inicialmente sobre esta [**
 
 Copyright &copy; 2024 conan_cos - bajo licencia <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>.
 
+</div>
 
 <!-- 
 Google Chrome Versión 129.0.6668.103 (Build oficial) (64 bits)
